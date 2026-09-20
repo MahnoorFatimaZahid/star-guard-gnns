@@ -1,0 +1,29 @@
+# Secrets - never commit a real token
+.env
+.env.local
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+backend/venv/
+venv/
+.venv/
+
+# Node / Next.js
+node_modules/
+frontend/.next/
+frontend/out/
+npm-debug.log*
+
+# Real-data test output (contains real GitHub handles)
+backend/data/real_test_results.csv
+backend/data/real_test_summary.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+backend/data/real_scan_latest.json

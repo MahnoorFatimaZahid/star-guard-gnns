@@ -1,0 +1,87 @@
+:root {
+  --ink: #F2F4F7;
+  --ink-dim: #9BA3B0;
+  --ink-faint: #7A8290;
+  --bg: #08080A;
+  --surface: #101116;
+  --surface-2: #0C0C0F;
+  --line: #1B1D23;
+  --line-soft: #17181C;
+  --accent: #34D399;
+  --accent-hi: #6EE7B7;
+  --accent-ink: #06251A;
+  --pink: #F5C8D0;
+  --blue: #C9D8F7;
+  --blue-mid: #8AB4F8;
+  --sand: #F8DCA8;
+  --mint: #B8E6D0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hi);
+}
+
+input::placeholder {
+  color: var(--ink-faint);
+}
+
+.mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* hover states ported from the design's style-hover attributes */
+.rail-btn:hover {
+  background: #1A1C21;
+}
+
+.ghost-btn:hover {
+  color: var(--ink);
+  border-color: #2A2C33;
+}
+
+.primary-btn:hover {
+  background: var(--accent-hi);
+}
+
+.row-btn:hover {
+  background: var(--surface-2);
+}
+
+.outline-btn:hover {
+  color: var(--ink);
+  border-color: #3A3E48;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+.dash-flow {
+  animation: dash 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dash-flow {
+    animation: none;
+  }
+}
