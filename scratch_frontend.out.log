@@ -1,0 +1,16 @@
+
+> starguard-dashboard@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.7s (512 modules)
+ GET / 200 in 1988ms
+ GET / 200 in 68ms
+ GET / 200 in 72ms
+ GET / 200 in 47ms
+ GET / 200 in 57ms

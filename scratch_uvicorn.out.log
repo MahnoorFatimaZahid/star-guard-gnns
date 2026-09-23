@@ -1,0 +1,80 @@
+INFO:     127.0.0.1:52562 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52562 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57648 - "OPTIONS /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51172 - "OPTIONS /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64048 - "OPTIONS /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53271 - "OPTIONS /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57648 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53271 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57648 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53271 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63683 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56308 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63683 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56308 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56308 - "OPTIONS /api/users?limit=50&sort=score&level=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63683 - "OPTIONS /api/users?limit=50&sort=score&level=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63683 - "GET /api/users?limit=50&sort=score&level=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56308 - "GET /api/users?limit=50&sort=score&level=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "OPTIONS /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57722 - "OPTIONS /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57722 - "GET /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "GET /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "OPTIONS /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57722 - "OPTIONS /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57722 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "OPTIONS /api/analysis/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "POST /api/analysis/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "OPTIONS /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "OPTIONS /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "OPTIONS /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "GET /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+[1/6] Generating synthetic GitHub graph...
+      users=1712 repos=1204 edges=39044
+[2/6] Engineering features...
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+[3/6] Building PyG graph...
+[4/6] Training GraphSAGE (primary model) + baselines...
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+      GraphSAGE  precision=1.00 recall=0.98 auc=1.00
+      GCN        precision=1.00 recall=1.00 auc=1.00
+      GradBoost  precision=0.90 recall=1.00 auc=1.00
+      LogReg     precision=0.65 recall=0.83 auc=0.94
+[5/6] Scoring all users/repos + detecting clusters...
+[6/6] Writing to database...
+Done. Database written to C:\Users\csc\Documents\GitHub\star-guard-gnns\backend\data\starguard.db
+INFO:     127.0.0.1:62308 - "GET /api/analysis/ana_00ba95528723/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59806 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59806 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59806 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59806 - "GET /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61893 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51441 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61893 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51441 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60158 - "GET /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56969 - "GET /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56969 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60158 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62216 - "GET /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51303 - "GET /api/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51303 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62216 - "GET /api/graph?limit_nodes=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62216 - "GET /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51303 - "GET /api/repos?limit=30&sort=score HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51303 - "GET /api/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62216 - "GET /api/stats HTTP/1.1" 200 OK
